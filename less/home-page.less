@@ -3,13 +3,35 @@
 .home {
 
   .intro {
+    .headpic{
+      .center();
+  
+    img{
+          width: 100%;
+          
+          @media @phone{
 
-    h2 {
-      padding: 15px;
-    }
+            width: 85%;
+          }
+        }
+      }
+      
+      h2 {
+        padding: 15px;
+        
+        @media @phone{
+          margin-left: 5%;
+        }
+
+      }
+     
 
     p {
       padding:0 15px;
+
+      @media @phone{
+        .mobileMar();
+      }
     }
   
   }
@@ -18,6 +40,22 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    @media @phone{
+     
+      .center();
+     
+      .sky {
+        display: none;
+      }
+      .launch{
+        display: none;
+      }
+      .blast{ 
+        width: 80%;
+      }
+
+    }
 
     img {
       width: 28%;
@@ -32,10 +70,20 @@
 
     h3 {
       margin-top: 11px;
+
+      @media @phone{
+        .mobileMar();
+      }
+
     }
 
     p {
       margin-top: 13px;
+
+      @media @phone{
+        .mobileMar();
+      }
+
     }
   }
 
@@ -43,14 +91,31 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    .center();
+
+    @media @phone{
+      display:flex;
+      flex-direction: column-reverse;
+      border: none;
+      margin-top: 1%;
+      padding: 2%;
+      width: 90%;
+      margin-left: 5%;
+    }
 
     .walk-text {
       width: 50%;
 
+      @media @phone{
+        width: 100%;
+      }
+
       h3 {
         margin-bottom: 10px;
+
+        @media @phone{
+          margin-top: 5%;
+        }
       }
 
       p {
@@ -58,6 +123,12 @@
       }
 
       .btn {
+        .custom-btn(@bg-color: @ebony-clay, @width: 120px, @txt-color: white);
+
+        @media @phone{
+          .custom-btn(@bg-color: @ebony-clay, @width: 430px, @txt-color: white);
+        }
+
       }
     }
 
@@ -65,10 +136,20 @@
       width: 46%;
       margin-left: 4%;
       
+      @media @phone{
+        width: 100%;
+        margin-left: 0%;
+
+      }
+
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+
+        @media @phone{
+          border-radius: none;
+        }
       }
     }
   }
