@@ -1,1 +1,31 @@
 // Mixins Here
+
+
+.mobileMar(){
+    margin-left: 5%;
+    width: 93%
+}
+
+.center(){
+	display: flex;
+	justify-content: center;
+}
+
+.custom-btn(@bg-color: @ebony-clay, @width, @txt-color: white){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @bg-color;
+    margin: 0 5px 20px;
+    cursor: pointer;
+    width: @width;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    color: @txt-color;
+    
+    &:hover{
+      background-color: @txt-color;
+      color: @bg-color;
+    }
+}
